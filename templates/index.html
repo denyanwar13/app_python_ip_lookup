@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} IP Finder {% endblock %}
+
+{% block body %}
+<div class="container">
+    <br>
+    <br>
+    <h1>Flask IP Finder - rewrite by deny anwar, source from Codeloop.org</h1>
+
+    <br>
+    <br>
+
+    <form action="{{url_for('Index')}}" method="post">
+        <div class="form-group">
+            <input type="text" name="search" class="form-control" placeholder="Enter IP Address">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Search">
+    </form>
+
+    <br>
+    <br>
+
+    <p>IP Address is : {{data.ip}}</p>
+    <p>City Location is : {{data.city}}</p>
+    <p>IP Country is : {{data.country}}</p>
+    <p>Available Language is : {{data.languages}}</p>
+    <p>Latitude Information is : {{data.latitude}}</p>
+    <p>Longitude Information is : {{data.longitude}}</p>
+    <p>Time Zone Information is : {{data.timezone}}</p>
+    <p>Available Calling Code is : {{data.country_calling_code}}</p>
+    <p>Available Currency is : {{data.currency}}</p>
+    <p>Internet Network is : {{data.org}}</p>
+    <p>Continent Code is : {{data.continent_code}}</p>
+    <p>Postal Code is : {{data.postal}}</p>
+    <p>UTC offset is : {{data.utc_offset}}</p>
+
+</div>
+{% endblock %}
